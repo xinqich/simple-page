@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Form Result{% endblock %}
+{% block content %}
+    <main class="main">
+        <h1>Thank You!</h1>
+        <div class="result-card">
+            <p><strong>Your Name:</strong> {{ name }}</p>
+            <p><strong>Your Email:</strong> {{ email }}</p>
+            <p><strong>Your Message:</strong></p>
+            <div class="result-message">{{ message }}</div>
+        </div>
+        <a href="/contact" class="btn back-btn">Go Back</a>
+    </main>
+{% endblock %}

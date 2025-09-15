@@ -2,6 +2,7 @@
     font-family: 'Manrope', sans-serif ;
 }
 
+
 body {
     margin: 0;
     padding: 0;
@@ -72,13 +73,12 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: left;
-    max-width: 30vw;
-    width: 100%;
+    width: 35vw;
     justify-self: center;
 }
 
-.confirm-msg {
-    margin: 20px;
+.notification {
+    font-size: 17px;
 }
 
 .contact-form input,
@@ -99,5 +99,40 @@ body {
 }
 
 .contact-form .btn:hover {
+    background-color: #444;
+}
+
+/* Result card */
+.result-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.result-card p {
+    margin: 10px 0;
+}
+
+.result-message {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 4px;
+    white-space: pre-wrap; /* сохраняет переносы строк */
+}
+
+.back-btn {
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+
+.back-btn:hover {
     background-color: #444;
 }
