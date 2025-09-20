@@ -21,9 +21,7 @@ def contact():
 @app.route("/result", methods=["POST", "GET"])
 def result():
     if request.method == "POST":
-        name = request.form.get("name")
-        email = request.form.get("email")
-        message = request.form.get('message')
-        return render_template('result.html', name=name, email=email, message=message)
+        user = request.form.to_dict()
+        return render_template('result.html', user=user)
     else:
         return redirect(url_for("contact"))
