@@ -5,5 +5,12 @@
         <h1>About Us</h1>
         <p>Our mission is to build lightweight, modern web apps using Flask.</p>
         <p>We focus on clean design, responsive layouts, and minimal code to deliver fast and user-friendly experiences.</p>
+        <p>Here's are a few members of our team:</p>
+        <ul style="padding: 0">
+            {% for member in team %}
+                <li style="list-style-type: none">{{ member.name }}, {{ member.role }}</li>
+            {% endfor %}
+
+        </ul>
     </main>
 {% endblock %}

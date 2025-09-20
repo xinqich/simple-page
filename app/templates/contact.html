@@ -3,6 +3,28 @@
 {% block content %}
     <main class="main">
         <h1>Contact Us</h1>
+        
+        <!-- Customer Care Information -->
+        <section class="customer-care-info">
+            <h2>Customer Care Department</h2>
+            <div class="contact-details">
+                <h3>{{ customer_care.name }}</h3>
+                <p><strong>Username:</strong> {{ customer_care.username }}</p>
+                <p><strong>Email:</strong> <a href="mailto:{{ customer_care.email }}">{{ customer_care.email }}</a></p>
+                <p><strong>Phone:</strong> <a href="tel:{{ customer_care.phone.replace(' ', '').replace('-', '') }}">{{ customer_care.phone }}</a></p>
+                <p><strong>Website:</strong> <a href="https://{{ customer_care.website }}" target="_blank">{{ customer_care.website }}</a></p>
+                
+                <div class="address-info">
+                    <h4>Address:</h4>
+                    <p>{{ customer_care.address.street }}, {{ customer_care.address.suite }}</p>
+                    <p>{{ customer_care.address.city }}, {{ customer_care.address.zipcode }}</p>
+                    <p><small>Coordinates: {{ customer_care.address.geo.lat }}, {{ customer_care.address.geo.lng }}</small></p>
+                </div>
+            </div>
+        </section>
+        
+        <hr style="margin: 2rem 0;">
+        
         <span class="notification"></span>
         <form class="contact-form" method="post" action="/result">
             <label for="name">Your Name:</label>
@@ -17,4 +39,9 @@
             <button type="submit" class="btn">Send</button>
         </form>
     </main>
+{% endblock %}
+
+
+{% block extrajs %}
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 {% endblock %}
